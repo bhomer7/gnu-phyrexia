@@ -6,6 +6,6 @@ mkdir Release
 cd Release
 curl -LJO https://github.com/Pryaxis/TShock/releases/download/v4.4.0-pre15/TShock4.4.0_Pre15_Terraria1.4.1.2.zip
 unzip TShock4.4.0_Pre15_Terraria1.4.1.2.zip
-cd TShock4.4.0_Pre15_Terraria1.4.1.2
-mono TerrariaServer.exe
+mv TShock4.4.0_Pre15_Terraria1.4.1.2 TShock
+
 
