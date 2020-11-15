@@ -4,7 +4,7 @@
 FROM mono:latest
 
 # Update and install tools
-RUN apt update && apt upgrade -y \ 
+RUN apt update && apt upgrade -y
 
 # Start Tshock
 EXPOSE 7777
