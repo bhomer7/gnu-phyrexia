@@ -2,16 +2,20 @@
 FROM debian:latest
 
 # Update and install tools
-RUN apt-get update
-	&& apt-get -y upgrade
-	&& apt-get install -y unzip git
+RUN su - \
+	&& apt-get update \
+	&& apt-get -y upgrade \
+	&& apt-get install -y unzip git sudo
 
 # Setup minecraft and crafty
 EXPOSE 8000
 EXPOSE 25565
+ENV TERM=linux
 
-RUN git clone https://gitlab.com/crafty-controller/crafty-installer-linux.git && cd crafty-installer-linux && sudo ./install_crafty.sh
+RUN git clone https://gitlab.com/crafty-controller/crafty-installer-linux.git \
+	&& cd crafty-installer-linux \
+	&& (printf "y\ny\ny\nmaster\ny\n") | ./install_crafty.sh
 
-CMD cd /var/opt/minecraft/crafty
-	&& source venv/bin/activate
-	&& python3 crafty-web/crafty.py
+CMD cd /var/opt/minecraft/crafty \
+	&& sudo su crafty \
+	&& ./run_crafty.sh
