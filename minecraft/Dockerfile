@@ -11,10 +11,10 @@ RUN su - \
 EXPOSE 8000
 EXPOSE 25565
 ENV TERM=linux
+COPY ./setup_Crafty.sh /tmp/setup_Crafty.sh
 
-RUN git clone https://gitlab.com/crafty-controller/crafty-installer-linux.git \
-	&& cd crafty-installer-linux \
-	&& (printf "y\ny\ny\nmaster\ny\n") | ./install_crafty.sh
+RUN chmod +x /tmp/setup_Crafty.sh \
+	&& ./tmp/setup_Crafty.sh
 
 CMD cd /var/opt/minecraft/crafty \
 	&& sudo su crafty \
