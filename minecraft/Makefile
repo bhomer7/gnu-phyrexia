@@ -13,3 +13,6 @@ interact:
 	
 attach:
 	docker start -ia $(CONTAINER_NAME)
+
+clean:
+	docker rm $(CONTAINER_NAME) && docker rmi minecraft

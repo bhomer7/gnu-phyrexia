@@ -5,7 +5,7 @@ FROM debian:latest
 RUN su - \
 	&& apt-get update \
 	&& apt-get -y upgrade \
-	&& apt-get install -y unzip git sudo
+	&& apt-get install -y unzip git sudo libffi-dev python3 openjdk-11-jre libssl-dev
 
 # Setup minecraft and crafty
 EXPOSE 8000
@@ -18,4 +18,5 @@ RUN git clone https://gitlab.com/crafty-controller/crafty-installer-linux.git \
 
 CMD cd /var/opt/minecraft/crafty \
 	&& sudo su crafty \
-	&& ./run_crafty.sh
+	&& /bin/bash
+#	&& ./run_crafty.sh
