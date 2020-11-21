@@ -17,7 +17,7 @@ RUN chmod +x /tmp/setup_Crafty.sh \
 	&& ./tmp/setup_Crafty.sh
 
 COPY ./setup_minecraft.sh /tmp/setup_minecraft.sh
-RUN chmod +x /tmp/setup_minecrft.sh \
+RUN chmod +x /tmp/setup_minecraft.sh \
 	&& ./tmp/setup_minecraft.sh
 
 COPY ./finalize_Crafty.sh /tmp/finalize_Crafty.sh
