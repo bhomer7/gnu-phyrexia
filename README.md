@@ -12,3 +12,10 @@ After running the initial setup will need to:
 - set ssh key for homert765
 - connect the minecraft server to crafty
 - create the minecraft save
+
+Is currently running on a c6g ec2 instance.
+
+Needs the following open ports:
+- 7777 for terraria
+- 25560 for crafty minecraft manager
+- 25565 for minecraft server
