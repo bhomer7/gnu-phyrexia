@@ -5,5 +5,3 @@ cd /var/opt/minecraft/crafty
 sudo su crafty
 timeout 60 ./run_crafty.sh > /tmp/crafty.out
 
-# Setup service
-systemctl enable crafty.service
