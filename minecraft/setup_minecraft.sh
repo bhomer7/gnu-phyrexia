@@ -12,3 +12,5 @@ curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/do
 unzip server.zip
 rm ${filename} ./cookie
 
+chown -R crafty ./server
+
