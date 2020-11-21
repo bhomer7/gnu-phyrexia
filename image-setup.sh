@@ -11,6 +11,19 @@ sudo mkdir -p /home/bhomer7/.ssh
 sudo cp ~/.ssh/authorized_keys /home/bhomer7/.ssh/authorized_keys
 sudo chown -R bhomer7 /home/bhomer7/.ssh
 
+# Add homert765 user
+sudo useradd -G wheel homert765
+sudo mkdir -p /home/homert765/.ssh
+sudo chown -R homert765 /home/homert765/.ssh
+
 # Setup docker
+sudo systemctl enable docker
 sudo service docker start
 
+cd
+git clone https://github.com/bhomer7/gnu-phyrexia.git
+cd gnu-phyrexia/minecraft
+sudo make
+cd ../terraria
+sudo make
+cd
