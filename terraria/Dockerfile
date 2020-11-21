@@ -14,4 +14,5 @@ COPY ./setup_TShock.sh /tmp/setup_TShock.sh
 RUN chmod +x /tmp/setup_TShock.sh \
 	&& ./tmp/setup_TShock.sh
 
-CMD mono $TERRARIA_ROOT/TShock/TerrariaServer.exe
+CMD cd $TERRARIA_ROOT/TShock \
+	mono $TERRARIA_ROOT/TShock/TerrariaServer.exe
