@@ -20,3 +20,11 @@ Needs the following open ports:
 - 7777 for terraria
 - 25560 for crafty minecraft manager
 - 25565 for minecraft server
+
+## Minecraft
+The minecraft image does not have the world save included. That needs to be copied into the /var/opt/minecraft/server/world directory. The usercache.json file might need to be updated as well.
+
+The minecraft image when run puts you at /var/opt/minecraft/crafty as the root user in bash. From there, you need to run run_crafty.sh to start the minecraft server manager.
+
+## Terraria
+The terraria image puts you directly in the TShock CLI.
