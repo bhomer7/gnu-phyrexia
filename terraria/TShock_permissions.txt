@@ -1,0 +1,7 @@
+group addperm guest tshock.ignore.*
+group addperm guest tshock.tp.rod
+group addperm guest tshock.world.editspawn
+group addperm guest tshock.npc.summonboss
+group addperm guest tshock.world.movenpc
+group addperm guest tshock.npc.hurttown
+group addperm guest tshock.npc.spawnpets
