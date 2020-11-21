@@ -25,6 +25,5 @@ RUN chmod +x /tmp/finalize_Crafty.sh
 USER crafty
 RUN ./tmp/finalize_Crafty.sh
 
-CMD cd /var/opt/minecraft/crafty 
-	&& /bin/bash
-#	&& ./run_crafty.sh
+CMD cd /var/opt/minecraft/crafty \ 
+	&& ./run_crafty.sh
